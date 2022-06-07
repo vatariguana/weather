@@ -1,0 +1,12 @@
+.app-container {
+  margin-top: 6%;
+  width: auto;
+  display: inline-grid;
+  justify-content: center;
+  background-image: url("./image/f.jpg");
+  margin-left: 30%;
+  border-radius: 10px;
+  .components {
+    width: 500px;
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../assets/scss/index.scss";
+.daily-container {
+  width: 500px;
+  position: fixed;
+  font-size: 18px;
+  border: 1px solid rgb(137, 136, 136);
+  margin-top: 4px;
+  margin-left: -8px;
+  border-radius: 8px;
+  .daily-title {
+    font-size: $fontsize20;
+  }
+  .daily-table {
+    display: flex;
+    width: 100%;
+    .daily-td {
+      display: flex;
+      padding: 2px;
+      width: 100%;
+      justify-content: center;
+      border-bottom: 1px solid grey;
+    }
+  }
+}

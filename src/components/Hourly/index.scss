@@ -1,0 +1,19 @@
+.hourly-container {
+  width: 500px;
+  height: 400px;
+  position: fixed;
+  margin-left: -178px;
+  border: 1px solid rgb(137, 136, 136);
+  margin-top: 6px;
+  border-radius: 8px;
+  overflow-y: scroll;
+
+  .items-container {
+    display: flex;
+    align-items: center;
+    .item {
+      display: flex;
+      width: 100%;
+    }
+  }
+}

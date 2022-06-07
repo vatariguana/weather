@@ -1,0 +1,11 @@
+@import "../../assets/scss/index.scss";
+
+.titlecity-container {
+  color: $white;
+  font-size: $fontsize20;
+  margin-top: 20px;
+  margin-left: 30px;
+  .item {
+    display: grid;
+  }
+}

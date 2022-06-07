@@ -1,0 +1,14 @@
+.home-container {
+  width: 100%;
+  .item-container {
+    display: flex;
+    width: 100%;
+    .item {
+      margin-left: 6px;
+      padding: 4px;
+      width: 100%;
+      .item-label {
+      }
+    }
+  }
+}

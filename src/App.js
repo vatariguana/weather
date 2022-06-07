@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+// import SearchBar from "./components/SearchBar"
+import Home from "./views/Home";
+import CurrentWeather from "./components/CurrentWeather";
+// import DailyWeather from "./components/Daily";
+import TitleCity from "./components/TitleCity";
+// import HourlyWeather from "./components/Hourly";
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <div className="components">
+        <TitleCity />
+      </div>
+      <div className="components">
+        <CurrentWeather />
+      </div>
+      <div className="components">
+        <Home />
+      </div>
     </div>
   );
 }
