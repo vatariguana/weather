@@ -11,23 +11,27 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="item-container">
-        <div className="item">
-          <label className="item-label" onClick={() => onClickOptions("Daily")}>
+        <div className="titles-container">
+          <label
+            className={`item-label ${showOptions === "Daily" && "selected"}`}
+            onClick={() => onClickOptions("Daily")}
+          >
             Daily
           </label>
-          {showOptions === "Daily" && <DailyWeather />}
-        </div>
-        <div className="item">
           <label
-            className="item-label"
+            className={`item-label ${showOptions === "Hourly" && "selected"}`}
             onClick={() => onClickOptions("Hourly")}
           >
             Hourly
           </label>
-          {showOptions === "Hourly" && <HourlyWeather />}
         </div>
-        <div className="item">
-          <label className="item-label">Details</label>
+        <div className="datos-container">
+          <div className="item">
+            {showOptions === "Daily" && <DailyWeather />}
+          </div>
+          <div className="item">
+            {showOptions === "Hourly" && <HourlyWeather />}
+          </div>
         </div>
       </div>
     </div>

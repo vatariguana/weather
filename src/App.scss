@@ -1,12 +1,15 @@
 .app-container {
-  margin-top: 6%;
+  margin-top: 8%;
   width: auto;
   display: inline-grid;
   justify-content: center;
-  background-image: url("./image/f.jpg");
-  margin-left: 30%;
+  border: none;
+  background-image: url("./assets/image/fondo2.webp");
+  margin-left: 10%;
   border-radius: 10px;
+  // border: 2px solid #fa6100;
+
   .components {
-    width: 500px;
+    width: 1000px;
   }
 }

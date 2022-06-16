@@ -15,20 +15,35 @@ const HourlyWeather = () => {
   const tempDaily = getWeatherAll?.hourly?.map((item) => {
     return item;
   });
-  console.log(tempDaily, "hora info");
+  const tempDailyLimit10 = tempDaily?.slice(0, 10);
+
   return (
     <div className="hourly-container">
       {tempDaily &&
         tempDaily?.map((item) => {
           return (
             <div className="items-container">
-              <label className="item">
-                {new Date(item?.dt * 1000).toString()}
-              </label>
-              <label className="item">
-                {parseInt(item?.temp - 273.15).toFixed(0) + "°C"}
-              </label>
-              <label className="item">{item.weather[0].main}</label>
+              <div className="item-container">
+                <label className="item">
+                  {format(new Date(item?.dt * 1000), "E H aaa")}
+                </label>
+              </div>
+              <div className="item-container">
+                <img
+                  src={
+                    "http://openweathermap.org/img/wn/" +
+                    item?.weather[0].icon +
+                    "@2x.png"
+                  }
+                  className="image-icono"
+                  alt="icono"
+                />
+              </div>
+              <div className="item-container">
+                <label className="item">
+                  {parseInt(item?.temp - 273.15).toFixed(0) + "°C"}
+                </label>
+              </div>
             </div>
           );
         })}

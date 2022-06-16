@@ -16,31 +16,48 @@ const DailyWeather = () => {
     return item;
   });
 
-  // console.log(tempDaily, "daily info");
+  console.log(tempDaily, "daily info");
   return (
     <div className="daily-container">
-      {isLoading ? (
-        <label>...Cargando</label>
-      ) : (
-        <label className="daily-title">Pronóstico de 8 días</label>
-      )}
-      {tempDaily &&
-        tempDaily?.map((item) => {
-          return (
-            <div className="daily-table">
-              <label className="daily-td">
-                {format(new Date(item?.dt * 1000), "dd-MMM-yyyy")}
-              </label>
-              <label className="daily-td">
-                {parseInt(item?.temp?.max - 273.15).toFixed(0) + "°C"}
-              </label>
-              <label className="daily-td">
-                {parseInt(item?.temp?.min - 273.15).toFixed(0) + "°C"}
-              </label>
-              <label className="daily-td">{item?.weather[0].main}</label>
-            </div>
-          );
-        })}
+      <div className="title-container">
+        {isLoading ? (
+          <label>...Cargando</label>
+        ) : (
+          <label className="daily-title">Pronóstico de 8 días</label>
+        )}
+      </div>
+      <div className="container-items">
+        <div className="container-daily">
+          {tempDaily?.map((item) => {
+            return (
+              <div className="daily-table">
+                <div className="item">
+                  <label className="daily-td">
+                    {format(new Date(item?.dt * 1000), "E-dd")}
+                  </label>
+                </div>
+                <div className="item">
+                  <img
+                    className="image-icono"
+                    src={
+                      "http://openweathermap.org/img/wn/" +
+                      item?.weather[0].icon +
+                      "@2x.png"
+                    }
+                    alt="icono"
+                  />
+                </div>
+                <div className="item">
+                  <label className="daily-td">
+                    {parseInt(item?.temp?.max - 273.15).toFixed(0) + "°C"} /
+                    {parseInt(item?.temp?.min - 273.15).toFixed(0) + "°C"}
+                  </label>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

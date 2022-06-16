@@ -1,13 +1,29 @@
 .home-container {
+  position: sticky;
   width: 100%;
+  margin-top: 12px;
+  color: black;
+  // margin-bottom: 8px;
   .item-container {
-    display: flex;
-    width: 100%;
-    .item {
-      margin-left: 6px;
+    .titles-container {
+      display: flex;
       padding: 4px;
-      width: 100%;
+      .selected {
+        color: #ec8e05;
+        text-decoration: underline;
+      }
       .item-label {
+        width: 100%;
+        margin-left: 8px;
+        font-size: 20px;
+        padding: 2px;
+        font-weight: bold;
+      }
+    }
+    .datos-container {
+      .item {
+        padding: 4px;
+        font-size: 12px;
       }
     }
   }
