@@ -5,7 +5,7 @@ import SkeletonFordailyAndHourly from "../../components/SkeletonForDailyAndHourl
 import TitleCity from "../../components/TitleCity";
 import "./index.scss";
 const Home = () => {
-  const [showOptions, setShowOptions] = useState("");
+  const [showOptions, setShowOptions] = useState("Daily");
   const onClickOptions = (value) => {
     setShowOptions(value);
   };

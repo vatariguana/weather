@@ -38,7 +38,6 @@ const CurrentWeather = () => {
         <div className="items-container">
           {isLoading ? (
             <>
-              {" "}
               <SkeletonCurrent />
             </>
           ) : (
