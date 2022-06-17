@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDataWeather } from "../../redux/Actions";
 import SkeletonFordailyAndHourly from "../SkeletonForDailyAndHourly";
+import SkeletonTitle from "../TitleCity/components/SkeletonTitle";
 import "./index.scss";
 const DailyWeather = () => {
   const dispatch = useDispatch();

@@ -1,9 +1,12 @@
 .skeleton-currentWeather-container {
   margin-left: 0px;
   width: 990px;
+  margin-top: 0px;
+  border: 1px solid #d6ddf9;
+
   .item {
     height: 50px;
-    background-color: #d6ddf9;
+    // background-color: #d6ddf9;
   }
   @media only screen and (max-width: 600px) {
     margin-top: 8px;
