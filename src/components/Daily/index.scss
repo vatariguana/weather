@@ -2,7 +2,6 @@
 
 .daily-container {
   margin-top: 4px;
-  margin-left: 4px;
   .title-container {
     margin-left: 4px;
     margin-bottom: 8px;
@@ -14,8 +13,6 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      overflow-y: hidden;
-
       .daily-table {
         min-width: 90px;
         text-align: center;
@@ -28,6 +25,24 @@
           }
           .image-icono {
             width: 46px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .container-items {
+      .container-daily {
+        display: flex;
+        flex-wrap: wrap;
+        .daily-table {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          border-bottom: 2px solid #ec8e05;
+          .item {
+            width: 100%;
           }
         }
       }

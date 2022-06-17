@@ -3,10 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { format } from "date-fns";
 import { getDataWeather } from "../../redux/Actions";
 import "./index.scss";
+import SkeletonTitle from "./components/SkeletonTitle";
 
 const TitleCity = () => {
   const dispatch = useDispatch();
-  const { getWeatherAll } = useSelector(({ WeatherReducer }) => WeatherReducer);
+  const { getWeatherAll, isLoading } = useSelector(
+    ({ WeatherReducer }) => WeatherReducer
+  );
 
   useEffect(() => {
     dispatch(getDataWeather());
@@ -20,10 +23,14 @@ const TitleCity = () => {
   }
   return (
     <div className="titlecity-container">
-      <div className="item">
-        <label>{getWeatherAll?.timezone}</label>
-        <label>{dateParse}</label>
-      </div>
+      {isLoading ? (
+        <SkeletonTitle />
+      ) : (
+        <div className="item">
+          <label>{getWeatherAll?.timezone}</label>
+          <label>{dateParse}</label>
+        </div>
+      )}
     </div>
   );
 };

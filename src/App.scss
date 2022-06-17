@@ -3,13 +3,23 @@
   width: auto;
   display: inline-grid;
   justify-content: center;
-  border: none;
   background-image: url("./assets/image/fondo2.webp");
+  background-size: cover;
   margin-left: 10%;
   border-radius: 10px;
-  // border: 2px solid #fa6100;
-
+  border: none;
+  box-shadow: 0px 5px 10px 0px rgba(197, 195, 195, 0.5);
   .components {
     width: 1000px;
+  }
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    background-image: none;
+    margin-left: 0px;
+
+    .components {
+    }
   }
 }

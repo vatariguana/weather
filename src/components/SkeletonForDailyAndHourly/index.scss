@@ -1,0 +1,24 @@
+@media only screen and (max-width: 600px) {
+  .skeleton-container {
+    width: 100%;
+    border: none;
+    background-color: #b6b3e1;
+    display: flex;
+    justify-content: space-evenly;
+
+    .skeleton-container-items {
+      margin-top: 8px;
+      width: 100%;
+      height: 35px;
+      padding: 4px;
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #ec8e05;
+
+      .item {
+        width: 100%;
+        border-radius: 4px;
+      }
+    }
+  }
+}

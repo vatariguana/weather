@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDataWeather } from "../../redux/Actions";
+import SkeletonFordailyAndHourly from "../SkeletonForDailyAndHourly";
 import "./index.scss";
 const DailyWeather = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,17 @@ const DailyWeather = () => {
     <div className="daily-container">
       <div className="title-container">
         {isLoading ? (
-          <label>...Cargando</label>
+          <>
+            <SkeletonFordailyAndHourly />
+            <SkeletonFordailyAndHourly />
+            <SkeletonFordailyAndHourly />
+            <SkeletonFordailyAndHourly />
+            <SkeletonFordailyAndHourly />
+            <SkeletonFordailyAndHourly />
+            <SkeletonFordailyAndHourly />
+            <SkeletonFordailyAndHourly />
+            <SkeletonFordailyAndHourly />
+          </>
         ) : (
           <label className="daily-title">Pronóstico de 8 días</label>
         )}

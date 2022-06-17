@@ -3,7 +3,7 @@
   width: 100%;
   margin-top: 12px;
   color: black;
-  // margin-bottom: 8px;
+  margin-left: 2px;
   .item-container {
     .titles-container {
       display: flex;
@@ -24,6 +24,17 @@
       .item {
         padding: 4px;
         font-size: 12px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-left: 0px;
+
+    .item-container {
+      .titles-container {
+        .item-label {
+        }
       }
     }
   }

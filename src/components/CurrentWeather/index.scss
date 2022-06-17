@@ -5,7 +5,7 @@
   text-align: center;
   align-items: center;
   padding: 6px;
-  margin-left: 30px;
+  margin-left: 6px;
   color: black;
   font-weight: bold;
 
@@ -23,5 +23,8 @@
       font-size: 40px;
       margin-left: 30px;
     }
+  }
+  @media only screen and (max-width: 600px) {
+    margin-left: 0px;
   }
 }
