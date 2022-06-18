@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import DailyWeather from "../../components/Daily";
 import HourlyWeather from "../../components/Hourly";
-import SkeletonFordailyAndHourly from "../../components/SkeletonForDailyAndHourly";
-import TitleCity from "../../components/TitleCity";
 import "./index.scss";
 const Home = () => {
   const [showOptions, setShowOptions] = useState("Daily");

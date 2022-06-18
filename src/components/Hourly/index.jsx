@@ -12,11 +12,11 @@ const HourlyWeather = () => {
 
   useEffect(() => {
     dispatch(getDataWeather());
+    //eslint-disable-next-line
   }, []);
   const tempDaily = getWeatherAll?.hourly?.map((item) => {
     return item;
   });
-  const tempDailyLimit10 = tempDaily?.slice(0, 10);
 
   return (
     <div className="hourly-container">

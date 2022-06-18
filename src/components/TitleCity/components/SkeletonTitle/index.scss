@@ -1,3 +1,4 @@
+@import "../../../../assets/scss/variables";
 .skeleton-titlecity-container {
   margin-left: 0px;
   width: 990px;
@@ -14,8 +15,8 @@
     height: 70px;
     background-color: #b6b3e1;
     border-radius: 4px;
-    width: 100%;
-    padding: 4px;
+    width: $width100;
+    padding: $padding4;
     .item {
       height: 32px;
     }

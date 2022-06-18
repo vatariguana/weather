@@ -13,6 +13,7 @@ const TitleCity = () => {
 
   useEffect(() => {
     dispatch(getDataWeather());
+    //eslint-disable-next-line
   }, []);
   let dateParse = "";
   if (getWeatherAll?.current?.dt) {

@@ -1,23 +1,24 @@
+@import "../../assets/scss/variables";
 .hourly-container {
-  margin-left: 4px;
+  margin-left: $margin4;
   padding: 2px;
 
   .title-container {
-    margin-left: 4px;
+    margin-left: $margin4;
     margin-bottom: 12px;
     font-size: 18px;
     padding: 2px;
     .title-loading {
-      width: 100%;
+      width: $width100;
       position: sticky;
     }
   }
   .items-container {
-    width: 100%;
+    width: $width100;
     .container-hourly {
       display: flex;
       justify-content: space-between;
-      width: 100%;
+      width: $width100;
       overflow-x: scroll;
       overflow-y: hidden;
       .items-data-container {
@@ -25,7 +26,7 @@
         text-align: center;
         margin-bottom: 12px;
         .item-container {
-          margin-right: 4px;
+          margin-right: $margin4;
           padding: 2px;
           .item {
             margin-right: 6px;
@@ -45,11 +46,11 @@
         display: flex;
         flex-wrap: wrap;
         .items-data-container {
-          width: 100%;
+          width: $width100;
           display: flex;
           justify-content: space-evenly;
           align-items: center;
-          border-bottom: 2px solid #ec8e05;
+          border-bottom: 2px solid $orange;
         }
       }
     }

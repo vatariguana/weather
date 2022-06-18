@@ -11,6 +11,7 @@ const CurrentWeather = () => {
 
   useEffect(() => {
     dispatch(getDataWeather());
+    //eslint-disable-next-line
   }, []);
   const gradosFarenheit = getWeatherAll?.current?.temp;
 

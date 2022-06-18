@@ -1,24 +1,24 @@
 @import "../../assets/scss/index.scss";
 
 .daily-container {
-  margin-top: 4px;
+  margin-top: $margin4;
   .title-container {
-    margin-left: 4px;
+    margin-left: $margin4;
     margin-bottom: 8px;
     font-size: 18px;
   }
   .container-items {
-    width: 100%;
+    width: $width100;
     .container-daily {
       display: flex;
       justify-content: space-between;
-      width: 100%;
+      width: $width100;
       .daily-table {
         min-width: 90px;
         text-align: center;
         margin-bottom: 12px;
         .item {
-          margin-right: 4px;
+          margin-right: $margin4;
           .daily-td {
             margin-right: 6px;
             padding: 2px;
@@ -36,13 +36,13 @@
         display: flex;
         flex-wrap: wrap;
         .daily-table {
-          width: 100%;
+          width: $width100;
           display: flex;
           justify-content: space-evenly;
           align-items: center;
-          border-bottom: 2px solid #ec8e05;
+          border-bottom: 2px solid $orange;
           .item {
-            width: 100%;
+            width: $width100;
           }
         }
       }

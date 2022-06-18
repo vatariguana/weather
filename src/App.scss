@@ -1,3 +1,4 @@
+@import "./assets/scss/variables";
 .app-container {
   margin-top: 8%;
   width: auto;
@@ -18,8 +19,5 @@
     margin-top: 2px;
     background-image: none;
     margin-left: 0px;
-
-    .components {
-    }
   }
 }

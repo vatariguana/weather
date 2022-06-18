@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Home from "./views/Home";
 import CurrentWeather from "./components/CurrentWeather";
 import TitleCity from "./components/TitleCity";

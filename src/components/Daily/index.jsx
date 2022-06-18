@@ -12,6 +12,7 @@ const DailyWeather = () => {
 
   useEffect(() => {
     dispatch(getDataWeather());
+    //eslint-disable-next-line
   }, []);
   const tempDaily = getWeatherAll?.daily?.map((item) => {
     return item;

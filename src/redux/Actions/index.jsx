@@ -1,15 +1,15 @@
 import axios from "axios";
-const apiKey = "e4403dd0fa504890ed1c25d7021ea08c";
-const lat = "-2.8833";
-const lon = "-78.9833";
+
 
 export const getDataWeather = () => async (dispatch) => {
+  
+
   dispatch({
     type: "GET_LOADING_WEATHER",
   });
   try {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${process.env.REACT_APP_LAT}&lon=${process.env.REACT_APP_LON}&appid=${process.env.REACT_APP_API_KEY}`
     );
     dispatch({
       type: "GET_WEATHER_DATA",
@@ -31,7 +31,7 @@ export const getDataWeatherName = (nameCity) => async (dispatch) => {
   });
   try {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&appid=${process.env.REACT_APP_API_KEY}`
     );
     console.log(response, "dataname");
     dispatch({
